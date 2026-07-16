@@ -331,17 +331,22 @@ transform:translateY(-15px);
 
 .profile{
 
-width:220px;
+width:270px;
 
-height:220px;
+height:480px;
 
 object-fit:cover;
+
+aspect-ratio:9/16;
 
 border-radius:30px;
 
 border:6px solid var(--gold);
 
-box-shadow:0 0 40px var(--gold);
+box-shadow:
+0 0 40px var(--gold);
+
+transition:.4s;
 
 }
 
