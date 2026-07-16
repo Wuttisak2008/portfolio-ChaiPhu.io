@@ -106,9 +106,11 @@ nav a:hover{
 
 .hero-img img{
     width:320px;
-    border-radius:50%;
-    border:6px solid gold;
-    box-shadow:0 0 30px gold;
+    height:400px;
+    object-fit:cover;
+    border-radius:15px;   /* สี่เหลี่ยมมุมโค้ง */
+    border:5px solid gold;
+    box-shadow:0 0 25px gold;
 }
 
 /* Section */
