@@ -1,201 +1,335 @@
 <!DOCTYPE html>
 <html lang="th">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | นายวุฒิศักดิ์ สวัสดี</title>
 
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
 
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600;700&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>My Portfolio</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
 
-<!-- ===== Header ===== -->
+<!-- Navbar -->
 
 <header>
 
-    <nav>
+<div class="logo">
 
-        <h2 class="logo">Portfolio</h2>
+PORTFOLIO
 
-        <ul>
+</div>
 
-            <li><a href="#home">หน้าหลัก</a></li>
+<nav>
 
-            <li><a href="#about">ประวัติ</a></li>
+<a href="#home">Home</a>
 
-            <li><a href="#gallery">ผลงาน</a></li>
+<a href="#about">About</a>
 
-            <li><a href="#contact">ติดต่อ</a></li>
+<a href="#education">Education</a>
 
-        </ul>
+<a href="#activities">Activities</a>
 
-    </nav>
+<a href="#portfolio">Portfolio</a>
+
+<a href="#contact">Contact</a>
+
+</nav>
 
 </header>
 
-<!-- ===== Hero ===== -->
+<!-- Hero -->
 
 <section class="hero" id="home">
 
-    <div class="hero-text">
+<div class="hero-left">
 
-        <h1>นายวุฒิศักดิ์ สวัสดี</h1>
+<span class="tag">
 
-        <h3>Portfolio เพื่อศึกษาต่อ </h3>
+WELCOME TO MY PORTFOLIO
 
-        <p>
-            เว็บไซต์รวบรวมผลงาน กิจกรรม และความภาคภูมิใจ
-            เพื่อใช้ประกอบการสมัครเข้าศึกษาต่อระดับมหาวิทยาลัย
-        </p>
+</span>
 
-        <a href="#gallery" class="btn">
-            ชมผลงาน
-        </a>
+<h1>
 
-    </div>
+______________________
 
-    <div class="hero-img">
+</h1>
 
-        <img src="images/1.jpg" alt="Profile">
+<h3>
 
-    </div>
+Portfolio เพื่อการศึกษาต่อ
 
-</section>
-
-<!-- ===== About ===== -->
-
-<section id="about">
-
-<h2 class="title">
-เกี่ยวกับฉัน
-</h2>
-
-<div class="about-box">
+</h3>
 
 <p>
 
-ชื่อ : นายวุฒิศักดิ์ สวัสดี
+เขียนคำแนะนำตัวเองสั้น ๆ ตรงนี้
 
-<br><br>
+</p>
 
-กำลังศึกษาระดับชั้นมัธยมศึกษาตอนปลาย
+<div class="hero-btn">
 
-<br><br>
+<a href="#portfolio" class="btn">
 
-มีความสนใจด้านเทคโนโลยี
-การพัฒนาเว็บไซต์
-AI
-IoT
-และนวัตกรรม
+ชมผลงาน
+
+</a>
+
+<a href="#contact" class="btn-outline">
+
+ติดต่อ
+
+</a>
+
+</div>
+
+</div>
+
+<div class="hero-right">
+
+<img src="1.jpg">
+
+</div>
+
+</section>
+
+<!-- About -->
+
+<section id="about">
+
+<h2>
+
+About Me
+
+</h2>
+
+<div class="grid">
+
+<div class="card">
+
+<h3>ข้อมูลส่วนตัว</h3>
+
+<p>
+
+ชื่อ : ___________________
+
+</p>
+
+<p>
+
+โรงเรียน : ___________________
+
+</p>
+
+<p>
+
+แผนการเรียน : ___________________
 
 </p>
 
 </div>
 
+<div class="card">
+
+<h3>เป้าหมาย</h3>
+
+<p>
+
+______________________________________
+
+</p>
+
+</div>
+
+</div>
+
 </section>
 
-<!-- ===== Gallery ===== -->
+<!-- Education -->
 
-<section id="gallery">
+<section id="education">
 
-<h2 class="title">
+<h2>
 
-ผลงาน Portfolio
+Education
+
+</h2>
+
+<div class="timeline">
+
+<div class="timeline-card">
+
+<h3>
+
+ประถมศึกษา
+
+</h3>
+
+<p>
+
+_____________________
+
+</p>
+
+</div>
+
+<div class="timeline-card">
+
+<h3>
+
+มัธยมต้น
+
+</h3>
+
+<p>
+
+_____________________
+
+</p>
+
+</div>
+
+<div class="timeline-card">
+
+<h3>
+
+มัธยมปลาย
+
+</h3>
+
+<p>
+
+_____________________
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Activities -->
+
+<section id="activities">
+
+<h2>
+
+Activities
+
+</h2>
+
+<div class="grid">
+
+<div class="card">
+
+🏆
+
+<h3>กิจกรรมเด่น</h3>
+
+<p>
+
+ใส่กิจกรรม
+
+</p>
+
+</div>
+
+<div class="card">
+
+🎖️
+
+<h3>รางวัล</h3>
+
+<p>
+
+ใส่รางวัล
+
+</p>
+
+</div>
+
+<div class="card">
+
+💻
+
+<h3>Project</h3>
+
+<p>
+
+ใส่โปรเจกต์
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Portfolio -->
+
+<section id="portfolio">
+
+<h2>
+
+Portfolio Gallery
 
 </h2>
 
 <div class="gallery">
 
-<div class="card">
-<img src="images/2.jpg" onclick="openImage(this.src)">
-<p>Portfolio หน้า 1</p>
-</div>
+<img src="2.jpg">
 
-<div class="card">
-<img src="images/3.jpg" onclick="openImage(this.src)">
-<p>Portfolio หน้า 2</p>
-</div>
+<img src="3.jpg">
 
-<div class="card">
-<img src="images/4.jpg" onclick="openImage(this.src)">
-<p>Portfolio หน้า 3</p>
-</div>
+<img src="4.jpg">
 
-<div class="card">
-<img src="images/5.jpg" onclick="openImage(this.src)">
-<p>Portfolio หน้า 4</p>
-</div>
+<img src="5.jpg">
 
-<div class="card">
-<img src="images/6.jpg" onclick="openImage(this.src)">
-<p>Portfolio หน้า 5</p>
-</div>
+<img src="6.jpg">
 
-<div class="card">
-<img src="images/7.jpg" onclick="openImage(this.src)">
-<p>Portfolio หน้า 6</p>
-</div>
+<img src="7.jpg">
 
-<div class="card">
-<img src="images/8.jpg" onclick="openImage(this.src)">
-<p>Portfolio หน้า 7</p>
-</div>
+<img src="8.jpg">
 
-<div class="card">
-<img src="images/9.jpg" onclick="openImage(this.src)">
-<p>Portfolio หน้า 8</p>
-</div>
+<img src="9.jpg">
 
-<div class="card">
-<img src="images/10.jpg" onclick="openImage(this.src)">
-<p>Portfolio หน้า 9</p>
-</div>
+<img src="10.jpg">
 
-<div class="card">
-<img src="images/11.jpg" onclick="openImage(this.src)">
-<p>Portfolio หน้า 10</p>
-</div>
+<img src="11.jpg">
 
-<div class="card">
-<img src="images/11.jpg" onclick="openImage(this.src)">
-<p>Portfolio หน้า 11</p>
-</div>
+<img src="12.jpg">
 
 </div>
 
 </section>
 
-<!-- ===== Popup ===== -->
-
-<div id="popup">
-
-<span onclick="closeImage()">&times;</span>
-
-<img id="popup-img">
-
-</div>
-
-<!-- ===== Contact ===== -->
+<!-- Contact -->
 
 <section id="contact">
 
-<h2 class="title">
+<h2>
 
 Contact
 
 </h2>
 
-<div class="contact-box">
+<div class="contact">
 
-<p>👤 นายวุฒิศักดิ์ สวัสดี</p>
+<p>Email : __________________</p>
 
-<p>🎓 Portfolio เพื่อศึกษาต่อ</p>
+<p>Facebook : __________________</p>
 
-
-<p>💻 GitHub : github.com/wuttisak</p>
+<p>GitHub : __________________</p>
 
 </div>
 
@@ -203,15 +337,12 @@ Contact
 
 <footer>
 
-<p>
-
-© 2026 นายวุฒิศักดิ์ สวัสดี
-
-</p>
+© 2026 Portfolio
 
 </footer>
 
 <script src="script.js"></script>
 
 </body>
+
 </html>
