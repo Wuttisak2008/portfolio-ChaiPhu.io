@@ -1,235 +1,193 @@
-/*==========================
-Buttons
-==========================*/
+// ==========================
+// PORTFOLIO V7 SCRIPT
+// ==========================
 
-.buttons{
 
-margin-top:35px;
 
-display:flex;
+// Loading Effect
 
-justify-content:center;
+window.addEventListener("load",()=>{
 
-gap:20px;
 
-flex-wrap:wrap;
+const loader = document.querySelector(".loader");
 
-}
 
-.btn{
+setTimeout(()=>{
 
-padding:15px 35px;
+loader.style.display="none";
 
-background:linear-gradient(45deg,#FFD54F,#FFC107);
+},2500);
 
-color:#0A2540;
 
-text-decoration:none;
+});
 
-border-radius:50px;
 
-font-weight:700;
 
-transition:.35s;
 
-box-shadow:0 10px 30px rgba(255,193,7,.35);
 
-}
+// Scroll Reveal Animation
 
-.btn:hover{
 
-transform:translateY(-6px);
+const sections = document.querySelectorAll("section");
 
-box-shadow:0 15px 40px rgba(255,193,7,.5);
 
-}
+const reveal = ()=>{
 
-.btn2{
 
-padding:15px 35px;
+sections.forEach(sec=>{
 
-border:2px solid white;
 
-color:white;
+const top = sec.getBoundingClientRect().top;
 
-text-decoration:none;
 
-border-radius:50px;
+if(top < window.innerHeight - 100){
 
-transition:.35s;
+
+sec.style.opacity="1";
+
+sec.style.transform="translateY(0)";
+
 
 }
 
-.btn2:hover{
 
-background:white;
+});
 
-color:#0A2540;
 
-}
+};
 
-/*==========================
-Section
-==========================*/
 
-section{
 
-padding:100px 8%;
+sections.forEach(sec=>{
 
-}
 
-section h2{
+sec.style.opacity="0";
 
-font-size:42px;
+sec.style.transform="translateY(60px)";
 
-text-align:center;
+sec.style.transition="1s";
 
-margin-bottom:55px;
 
-color:#FFD54F;
+});
 
-}
 
-section h2::after{
 
-content:"";
+window.addEventListener(
+"scroll",
+reveal
+);
 
-display:block;
 
-width:90px;
+reveal();
 
-height:4px;
 
-background:#FFD54F;
 
-margin:15px auto;
 
-border-radius:30px;
 
-}
 
-/*==========================
-About
-==========================*/
 
-.about{
+// Mouse Glow Effect
 
-display:grid;
 
-grid-template-columns:320px 1fr;
+const glow = document.createElement("div");
 
-gap:40px;
 
-align-items:center;
+glow.className="mouse-glow";
 
-}
 
-.left{
+document.body.appendChild(glow);
 
-display:flex;
 
-justify-content:center;
 
-}
+document.addEventListener("mousemove",(e)=>{
 
-.left img{
 
-width:270px;
+glow.style.left=e.clientX+"px";
 
-height:350px;
+glow.style.top=e.clientY+"px";
 
-object-fit:cover;
 
-border-radius:25px;
+});
 
-border:5px solid #FFD54F;
 
-}
 
-.right{
 
-background:rgba(255,255,255,.08);
 
-backdrop-filter:blur(15px);
 
-padding:40px;
 
-border-radius:25px;
+// Image Click Zoom
 
-border:1px solid rgba(255,255,255,.15);
 
-box-shadow:0 15px 40px rgba(0,0,0,.2);
+const images=document.querySelectorAll(".gallery img");
 
-}
 
-.right h3{
+images.forEach(img=>{
 
-font-size:30px;
 
-margin-bottom:20px;
+img.addEventListener("click",()=>{
 
-color:#FFD54F;
 
-}
+img.classList.toggle("zoom");
 
-.right p{
 
-line-height:2;
+});
 
-}
 
-/*==========================
-Cards
-==========================*/
+});
 
-.cards{
 
-display:grid;
 
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 
-gap:30px;
+
+
+
+
+// Active Menu
+
+
+const links=document.querySelectorAll("nav a");
+
+
+
+window.addEventListener("scroll",()=>{
+
+
+let current="";
+
+
+sections.forEach(sec=>{
+
+
+const sectionTop=sec.offsetTop-150;
+
+
+if(scrollY>=sectionTop){
+
+current=sec.id;
 
 }
 
-.card{
 
-background:rgba(255,255,255,.08);
+});
 
-backdrop-filter:blur(20px);
 
-padding:35px;
 
-border-radius:25px;
+links.forEach(link=>{
 
-text-align:center;
 
-border:1px solid rgba(255,255,255,.12);
+link.style.color="white";
 
-transition:.35s;
 
-}
+if(link.getAttribute("href")=="#"+current){
 
-.card:hover{
 
-transform:translateY(-10px);
+link.style.color="#FFD54F";
 
-box-shadow:0 0 35px rgba(66,165,245,.45);
 
 }
 
-.card h3{
 
-margin:15px 0;
+});
 
-color:#FFD54F;
 
-font-size:24px;
-
-}
-
-.card p{
-
-opacity:.9;
-
-}
+});
