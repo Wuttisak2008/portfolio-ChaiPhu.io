@@ -676,5 +676,349 @@ section h2{
 .cards{
     grid-template-columns:1fr;
 }
+/* ==========================
+   V7 PREMIUM EFFECT
+========================== */
+
+
+/* Hero Floating */
+
+.hero-card{
+
+animation:float 5s ease-in-out infinite;
 
 }
+
+
+@keyframes float{
+
+0%{
+transform:translateY(0);
+}
+
+50%{
+transform:translateY(-15px);
+}
+
+100%{
+transform:translateY(0);
+}
+
+}
+
+
+
+/* Logo Glow */
+
+.logo{
+
+text-shadow:
+0 0 10px #FFD54F,
+0 0 30px #FFD54F;
+
+}
+
+
+
+/* Profile Neon */
+
+.profile{
+
+animation: neon 3s infinite alternate;
+
+}
+
+
+@keyframes neon{
+
+from{
+
+box-shadow:
+0 0 15px #FFD54F;
+
+}
+
+to{
+
+box-shadow:
+0 0 45px #42A5F5;
+
+}
+
+}
+
+
+
+
+/* Card Shine */
+
+.card{
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+
+.card::before{
+
+content:"";
+
+position:absolute;
+
+width:200%;
+
+height:200%;
+
+background:
+linear-gradient(
+120deg,
+transparent,
+rgba(255,255,255,.25),
+transparent
+);
+
+transform:translateX(-100%) rotate(25deg);
+
+transition:.8s;
+
+}
+
+
+
+.card:hover::before{
+
+transform:translateX(100%) rotate(25deg);
+
+}
+
+
+
+
+
+/* Gallery 3D */
+
+.gallery img{
+
+filter:
+brightness(.9);
+
+}
+
+
+
+.gallery img:hover{
+
+filter:
+brightness(1.15);
+
+transform:
+translateY(-10px)
+scale(1.08)
+rotate(2deg);
+
+}
+
+
+
+
+
+/* Section Animation */
+
+
+section{
+
+animation:
+fadeUp 1s ease;
+
+}
+
+
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+
+transform:translateY(50px);
+
+}
+
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+
+
+
+/* Background Moving */
+
+body::before{
+
+
+content:"";
+
+position:fixed;
+
+width:600px;
+
+height:600px;
+
+border-radius:50%;
+
+background:
+radial-gradient(
+circle,
+rgba(255,213,79,.18),
+transparent 70%
+);
+
+
+top:20%;
+
+left:40%;
+
+animation:
+moveBg 12s infinite alternate;
+
+z-index:-2;
+
+
+}
+
+
+
+@keyframes moveBg{
+
+
+from{
+
+transform:
+translate(-100px,-50px);
+
+}
+
+
+to{
+
+transform:
+translate(100px,80px);
+
+}
+
+
+}
+
+
+
+
+/* Button Gaming Style */
+
+
+.btn{
+
+
+position:relative;
+
+overflow:hidden;
+
+
+}
+
+
+.btn::before{
+
+
+content:"";
+
+
+position:absolute;
+
+
+top:0;
+
+left:-100%;
+
+
+width:100%;
+
+height:100%;
+
+
+background:
+linear-gradient(
+90deg,
+transparent,
+rgba(255,255,255,.6),
+transparent
+);
+
+
+transition:.5s;
+
+
+}
+
+
+
+.btn:hover::before{
+
+left:100%;
+
+
+}
+
+
+
+
+/* Menu Active */
+
+
+nav a:hover{
+
+
+text-shadow:
+
+0 0 15px #FFD54F;
+
+
+}
+
+
+
+
+/* Contact Glow */
+
+
+.contact:hover{
+
+
+box-shadow:
+
+0 0 40px rgba(255,213,79,.35);
+
+
+}
+
+
+
+/* Mouse Selection */
+
+
+::selection{
+
+background:#FFD54F;
+
+color:#0A2540;
+
+}
+
