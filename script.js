@@ -1,118 +1,235 @@
-// =========================
-// Portfolio V5 Script
-// =========================
+/* ================= SECTION ================= */
 
-// Animation เมื่อเลื่อน
+section{
 
-const observer = new IntersectionObserver((entries)=>{
-
-entries.forEach(entry=>{
-
-if(entry.isIntersecting){
-
-entry.target.classList.add("show");
+    padding:90px 8%;
 
 }
 
-});
+section h2{
 
-},{threshold:0.2});
+    text-align:center;
 
-document.querySelectorAll(".card,.timeline-card,.gallery img,.contact").forEach(el=>{
+    font-size:40px;
 
-el.classList.add("hidden");
+    color:var(--blue);
 
-observer.observe(el);
+    margin-bottom:50px;
 
-});
-
-
-// =========================
-// Zoom รูป Portfolio
-// =========================
-
-const images=document.querySelectorAll(".gallery img");
-
-images.forEach(img=>{
-
-img.addEventListener("click",()=>{
-
-const overlay=document.createElement("div");
-
-overlay.className="overlay";
-
-overlay.innerHTML=`<img src="${img.src}">`;
-
-document.body.appendChild(overlay);
-
-overlay.onclick=()=>{
-
-overlay.remove();
+    position:relative;
 
 }
 
-});
+section h2::after{
 
-});
+    content:"";
 
+    width:80px;
 
-// =========================
-// ปุ่มกลับด้านบน
-// =========================
+    height:4px;
 
-const topBtn=document.createElement("button");
+    background:var(--gold);
 
-topBtn.className="top-btn";
+    display:block;
 
-topBtn.innerHTML="↑";
+    margin:15px auto;
 
-document.body.appendChild(topBtn);
-
-window.addEventListener("scroll",()=>{
-
-if(window.scrollY>300){
-
-topBtn.style.display="flex";
-
-}else{
-
-topBtn.style.display="none";
+    border-radius:10px;
 
 }
 
-});
+/* ================= ABOUT ================= */
 
-topBtn.onclick=()=>{
+.about{
 
-window.scrollTo({
+    display:grid;
 
-top:0,
+    grid-template-columns:320px 1fr;
 
-behavior:"smooth"
+    gap:40px;
 
-});
+    align-items:center;
 
-};
+    max-width:1200px;
 
-
-// =========================
-// Navbar เปลี่ยนสีเมื่อเลื่อน
-// =========================
-
-const header=document.querySelector("header");
-
-window.addEventListener("scroll",()=>{
-
-if(window.scrollY>50){
-
-header.style.background="rgba(11,46,89,.98)";
-header.style.boxShadow="0 10px 30px rgba(0,0,0,.25)";
-
-}else{
-
-header.style.background="rgba(11,46,89,.92)";
-header.style.boxShadow="0 10px 30px rgba(0,0,0,.15)";
+    margin:auto;
 
 }
 
-});
+.photo{
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+.photo img{
+
+    width:280px;
+
+    height:350px;
+
+    object-fit:cover;
+
+    border-radius:20px;
+
+    border:6px solid var(--gold);
+
+    box-shadow:0 15px 35px rgba(0,0,0,.15);
+
+}
+
+.info{
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+}
+
+.info p{
+
+    font-size:18px;
+
+    margin:18px 0;
+
+    line-height:1.8;
+
+}
+
+/* ================= HIGHLIGHT ================= */
+
+.cards{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:30px;
+
+}
+
+.card{
+
+    background:white;
+
+    padding:35px;
+
+    border-radius:20px;
+
+    border-top:5px solid var(--gold);
+
+    text-align:center;
+
+    transition:.35s;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+.card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 20px 40px rgba(0,43,91,.15);
+
+}
+
+.card h3{
+
+    color:var(--blue);
+
+    margin-bottom:20px;
+
+}
+
+.card p{
+
+    color:#666;
+
+    line-height:1.8;
+
+}
+
+/* ================= GALLERY ================= */
+
+.gallery{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:25px;
+
+}
+
+.gallery img{
+
+    width:100%;
+
+    border-radius:18px;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
+
+}
+
+.gallery img:hover{
+
+    transform:scale(1.05);
+
+    box-shadow:0 20px 40px rgba(0,43,91,.18);
+
+}
+
+/* ================= CONTACT ================= */
+
+.contact{
+
+    max-width:700px;
+
+    margin:auto;
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+}
+
+.contact p{
+
+    margin:15px 0;
+
+    font-size:18px;
+
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+
+    background:var(--blue);
+
+    color:white;
+
+    text-align:center;
+
+    padding:30px;
+
+    margin-top:70px;
+
+}
